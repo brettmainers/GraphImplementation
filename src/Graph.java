@@ -16,12 +16,16 @@ public class Graph {
         if (!adjList.containsKey(vertex)) {
             ArrayList<String> list = new ArrayList<>();
             adjList.put(vertex, list);
+        } else {
+            System.out.println("Vertex already exists");
         }
     }
 
     public void addEdge(String source, String destination) {
         if (adjList.containsKey(source)) {
             adjList.get(source).add(destination); 
+        } else {
+            System.out.println("Source vertex does not exist");
         }
     }
 
