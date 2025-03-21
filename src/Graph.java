@@ -28,8 +28,8 @@ public class Graph {
     public void print() {
         for (String key : adjList.keySet()) {
             System.out.print(key + ": ");
-            for (String string : adjList.get(key)) {
-                System.out.print(string + " -> " );
+            for (String value : adjList.get(key)) {
+                System.out.print(value + " -> " );
             }
             System.out.println();
         }
@@ -57,7 +57,7 @@ public class Graph {
         HashSet<String> visited = new HashSet<>();
         dFSHelper(source, visited);
     }
-
+    // recursive helper method to perform DFS
     public void dFSHelper(String source, HashSet<String> visited) {
         if (visited.contains(source)) {
             return;
